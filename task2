@@ -1,0 +1,56 @@
+import java.util.*;
+ 
+public class ABCDE {
+ 
+    
+    public static void getname()
+    {
+        
+        Scanner sc = new Scanner(System.in);
+ 
+        
+        int no = 1 +(int)(100* Math.random());
+ 
+       
+        int temp = 5;
+ 
+        int j, guess;
+ 
+        System.out.println(" chosen A number"+ " between 1 to 100."+ "Guess the number"+ " in 5 trials.");
+ 
+        
+        for (j = 0; j < temp; j++) {
+ 
+            System.out.println("Guess the number:");
+ 
+          
+            guess = sc.nextInt();
+ 
+          
+            if (no == guess) {
+                System.out.println("Sucessful!"+ " You sucess guesse the number.");
+                break;
+            }
+            else if (no > guess && j != temp- 1) {
+                System.out.println(" number is " + "greater than " + guess);
+            }
+            else if (no < guess && j != temp- 1) {
+                System.out.println("The number is" + " less than " + guess);
+            }
+        }
+ 
+        if (j == temp) {
+            System.out.println("You have exhausted"+ " temp trials.");
+ 
+            System.out.println(" number is the " + no);
+        }
+    }
+ 
+    
+    public static void main(String arg[])
+    {
+ 
+        
+        getname();
+    }
+}
